@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box; /*sets padding border to size*/
+}
+
+body {
+    background: #FFCB05;
+    display: flex;/*makes child items inside container child items*/
+    flex-direction: column;/*want the h1 and div to be stacked veritcally*/
+    align-items: center;/*changes axis so PokeDex moves to center - cross axis is now horizontal*/
+}
+
+h1 {
+    font-size: 50px;
+    background: #3D7DCA;/*flex item - wont apply across screen*/
+    border: 5px solid #003A70;
+    color: #FFCB05;
+    padding: 10px;
+    letter-spacing: 5px;
+    border-radius: 25px;
+}
+
+#container {/*adding these styles so we can see changes. will remove before completion*/
+    max-width: 1200px;/*stops the container from expanding beyond 1200px*/
+    height: 20px;
+    display: flex;
+    justify-content: center;/*keeps images center as view screen is reduced*/
+    flex-wrap: wrap;/*wraps images onto next line so they don't continually stack*/
+}
