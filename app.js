@@ -12,11 +12,11 @@ function createPokeCard(pokemon){
         //string value HTML with new element we created
      //div inside an HTML file
      pokeCard.innerHTML = `
-     <div class="img-container">
-       <img src="${pokemon.data.sprites.front_shiny}" alt="${pokemon.data.name}"/>
-     </div>
-     <h3 class="name">${pokemon.data.name.toUpperCase()}</h3>
-     `;
+  <div class="img-container">
+    <img src="${pokemon.data.sprites.front_shiny}" alt="${pokemon.data.name}" />
+  </div>
+  <h3 class="name">${pokemon.data.name.toUpperCase()}</h3>
+  `;
    }
    //The 'getPokemonData' function makes an AXIOS.GET request to the PokeAPI using a specific pokemon ID/Number then takes the returned data and passes it into the 'createPokeCard' Function
    async function getPokemonData(id){
@@ -30,8 +30,8 @@ function createPokeCard(pokemon){
   //creates loop to run the pokemon function, create a new card and display on page
   // The getPokemon function loops through all the pokemon IDs and runs/executes the getPokemonData function for each ID
   async function getPokemon(){
-    for (i = 1; i <=1; i++){
-        await getPokemonData(i);//use await for async function because we want them to display in order
+    for (i = 1; i <= numOfPokemon; i++){
+      await getPokemonData(i);//use await for async function because we want them to display in order
     }
   }
   getPokemon();
